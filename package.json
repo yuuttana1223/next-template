@@ -10,7 +10,8 @@
     "fix": "run-s -c fix:lint fix:prettier",
     "fix:lint": "next lint --fix .",
     "prettier": "prettier --check .",
-    "fix:prettier": "prettier --write ."
+    "fix:prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "12.1.6",
@@ -28,5 +29,14 @@
     "prettier": "^2.6.2",
     "typescript": "4.7.2",
     "husky": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix .",
+      "prettier --write ."
+    ],
+    "**/*.{json,md,mdx,css,html,yml,yaml,scss}": [
+      "prettier --write ."
+    ]
   }
 }
