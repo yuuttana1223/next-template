@@ -21,7 +21,7 @@
     "max-nested-callbacks": ["warn", 4],
     // マジックナンバー
     "no-magic-numbers": "warn",
-    // async関数でawaitを使う
+    // async関数でawaitが一回は使われているか
     "require-await": "warn",
     "react/function-component-definition": [
       "warn",
